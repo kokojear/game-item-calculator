@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조각 가격 비교기</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>조각 가격 비교기</h1>
+
+        <label for="fragmentPriceInWon">조각 가격 (원): </label>
+        <input type="text" id="fragmentPriceInWon" placeholder="조각 가격 (원)" oninput="formatNumber(this)" /><br />
+
+        <label for="mesoPriceInWonMin">1억 메소 가격 (원) 최소값: </label>
+        <input type="text" id="mesoPriceInWonMin" placeholder="1억 메소 가격 최소 (원)" oninput="formatNumber(this)" /><br />
+
+        <label for="mesoPriceInWonMax">1억 메소 가격 (원) 최대값: </label>
+        <input type="text" id="mesoPriceInWonMax" placeholder="1억 메소 가격 최대 (원)" oninput="formatNumber(this)" /><br />
+
+        <label for="fragmentPriceInMesoMin">조각 가격 (메소) 최소값: </label>
+        <input type="text" id="fragmentPriceInMesoMin" placeholder="최소 조각 가격 (메소)" oninput="formatNumber(this)" /><br />
+
+        <label for="fragmentPriceInMesoMax">조각 가격 (메소) 최대값: </label>
+        <input type="text" id="fragmentPriceInMesoMax" placeholder="최대 조각 가격 (메소)" oninput="formatNumber(this)" /><br />
+
+        <button onclick="calculate()">계산하기</button>
+
+        <h2>결과</h2>
+        <p id="result"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
